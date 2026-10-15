@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Km Square | Premium Fashion</title>
+
+<meta name="description" content="Discover timeless fashion and elegant collections at Km Square. Shop your favorite styles today.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #f8f3eb;
+    --brown: #553b2b;
+    --dark: #2c211b;
+    --gold: #b18a58;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: rgba(248,243,235,.97);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e6d9c9;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--brown);
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    background: var(--brown);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 3px;
+}
+
+.hero {
+    min-height: 580px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 65px 7%;
+    gap: 40px;
+}
+
+.hero-text small {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.12;
+    margin: 22px 0;
+    color: var(--brown);
+}
+
+.hero p {
+    color: #78695c;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: var(--brown);
+    color: white;
+    border: 1px solid var(--brown);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--brown);
+    margin-left: 10px;
+}
+
+.hero-image {
+    height: 450px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #e6d8c7;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.features {
+    background: var(--brown);
+    color: white;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.features div {
+    font-size: 14px;
+}
+
+section {
+    padding: 75px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading small {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: var(--brown);
+    margin-top: 8px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    padding-bottom: 22px;
+    transition: .3s;
+    border: 1px solid #eee4d8;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #553b2b12;
+}
+
+.product img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    background: #e6d8c7;
+}
+
+.product-info {
+    padding: 20px 18px 0;
+}
+
+.product-info h3 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    color: var(--brown);
+}
+
+.product-info p {
+    color: #827366;
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.price {
+    color: var(--brown);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 16px;
+}
+
+.order-btn {
+    display: block;
+    text-align: center;
+    padding: 11px;
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    transition: .3s;
+}
+
+.order-btn:hover {
+    background: var(--brown);
+    color: white;
+}
+
+.banner {
+    background: #e9ddcd;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.banner h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 45px);
+    color: var(--brown);
+    margin-bottom: 12px;
+}
+
+.banner p {
+    margin-bottom: 25px;
+    color: #78695c;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color: var(--brown);
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #78695c;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: var(--dark);
+    color: #eee2d4;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer .logo {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+footer a {
+    color: #d9b88d;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+    background: #218c52;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 50px;
+    box-shadow: 0 5px 18px #0002;
+    z-index: 200;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 13px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        padding: 7px 10px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 5%;
+        gap: 30px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product img {
+        height: 220px;
+    }
+
+    .product-info {
+        padding: 14px 12px 0;
+    }
+
+    .product-info h3 {
+        font-size: 17px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about img {
+        height: 280px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    nav {
+        gap: 9px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 300px;
+    }
+
+    .btn {
+        padding: 12px 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a class="logo" href="#home">Km <span>Square</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-btn">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <small>WELCOME TO KM SQUARE</small>
+
+        <h1>Timeless Style.<br>Everyday Elegance.</h1>
+
+        <p>
+            Discover your style with Km Square.
+            Explore elegant fashion, modern designs,
+            and collections made for your everyday moments.
+        </p>
+
+        <a href="#collection" class="btn">Explore Collection →</a>
+
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+
+    <div class="hero-image">
+        <img
+        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+        alt="Km Square fashion collection">
+    </div>
+
+</section>
+
+<div class="features">
+    <div>✦ Premium Style</div>
+    <div>✦ Modern Collection</div>
+    <div>✦ Easy WhatsApp Ordering</div>
+    <div>✦ Customer Support</div>
+</div>
+
+<section id="collection">
+
+    <div class="section-heading">
+        <small>OUR COLLECTION</small>
+        <h2>Featured Products</h2>
+        <p>Find your next favorite look.</p>
+    </div>
+
+    <div class="products">
+
+        <article class="product">
+            <img
+            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80"
+            alt="Elegant fashion outfit">
+
+            <div class="product-info">
+                <h3>Classic Style</h3>
+                <p>Elegant everyday fashion.</p>
+                <div class="price">৳ 1,250</div>
+
+                <a class="order-btn"
+                href="https://wa.me/8801608310293?text=Hello%20Km%20Square%2C%20I%20want%20to%20order%20Classic%20Style."
+                target="_blank" rel="noopener">
+                Order on WhatsApp
+                </a>
+            </div>
+        </article>
+
+        <article class="product">
+            <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
+            alt="Modern fashion collection">
+
+            <div class="product-info">
+                <h3>Modern Collection</h3>
+                <p>Modern looks for every occasion.</p>
+                <div class="price">৳ 1,450</div>
+
+                <a class="order-btn"
+                href="https://wa.me/8801608310293?text=Hello%20Km%20Square%2C%20I%20want%20to%20order%20Modern%20Collection."
+                target="_blank" rel="noopener">
+                Order on WhatsApp
+                </a>
+            </div>
+        </article>
+
+        <article class="product">
+            <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"
+            alt="Premium clothing">
+
+            <div class="product-info">
+                <h3>Premium Essentials</h3>
+                <p>Simple, elegant, and versatile.</p>
+                <div class="price">৳ 990</div>
+
+                <a class="order-btn"
+                href="https://wa.me/8801608310293?text=Hello%20Km%20Square%2C%20I%20want%20to%20order%20Premium%20Essentials."
+                target="_blank" rel="noopener">
+                Order on WhatsApp
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<div class="banner">
+    <h2>Style That Speaks For You</h2>
+
+    <p>
+        Discover a fresh look with Km Square.
+        Your style, your choice.
+    </p>
+
+    <a class="btn"
+    href="https://wa.me/8801608310293?text=Hello%20Km%20Square%2C%20please%20show%20me%20your%20latest%20collection."
+    target="_blank" rel="noopener">
+    Discover More
+    </a>
+</div>
+
+<section class="about" id="about">
+
+    <img
+    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=85"
+    alt="Fashion store">
+
+    <div>
+        <small>OUR STORY</small>
+
+        <h2>Welcome to Km Square</h2>
+
+        <p>
+            At Km Square, we believe fashion is a way
+            to express your personality. Our goal is to
+            bring you stylish collections with a simple,
+            elegant, and modern feel.
+        </p>
+
+        <p>
+            Explore our collection and contact us
+            directly to find the right style for you.
+        </p>
+
+        <a href="#collection" class="btn">Shop Collection</a>
+    </div>
+
+</section>
+
+</main>
+
+<footer id="contact">
+
+    <div class="logo">Km <span>Square</span></div>
+
+    <p>Timeless Style. Everyday Elegance.</p>
+
+    <p>Fashion for your everyday moments.</p>
+
+    <p>
+        WhatsApp:
+        <a href="https://wa.me/8801608310293"
+        target="_blank" rel="noopener">
+        +880 1608-310293
+        </a>
+    </p>
+
+    <p>© <span id="year"></span> Km Square. All rights reserved.</p>
+
+</footer>
+
+<a class="whatsapp-float"
+href="https://wa.me/8801608310293?text=Hello%20Km%20Square"
+target="_blank" rel="noopener">
+☏ WhatsApp
+</a>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
